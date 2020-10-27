@@ -6,14 +6,14 @@
    
    <!-- menu tengah -->
 	<div id="menu-tengah">
-    	<div id="bg_menu">Category
+    	<div id="bg_menu">Writer
     	</div>
     	<div id="content_menu">
         <div id="menu_header">
         	<form action="?page=data_service" method="post">
         	<table width="100%" height="100%" style="border:1px solid #9cc;">
             <tr>
-              <td width="45%"><a href="?page=tambah_data_category">Tambah Data</a></td>
+              <td width="45%"><a href="?page=tambah_data_writer">Tambah Data</a></td>
               <td width="60%" align="right"><input type="text" name="cari" size="30" placeholder="Cari disini"></td>
               <td><input type="submit" id="submit" value="cari"></td>
             </tr>
@@ -31,10 +31,10 @@
               </tr>
             </thead>
             <?php
-      				$query = "SELECT * FROM category_tb 
-              WHERE category_id LIKE '%$cari_post%'
-              OR name_id LIKE '%$cari_post%'
-              ORDER by name_id DESC";
+      				$query = "SELECT * FROM writer_tb 
+              WHERE writer_id LIKE '%$cari_post%'
+              OR writer_name LIKE '%$cari_post%'
+              ORDER by writer_name DESC";
       				$sql    = mysqli_query($koneksi,$query);
       				$total  = mysqli_num_rows($sql);
       				$no = 1;
@@ -43,10 +43,10 @@
       			?>
    	        <tbody>
    	          <tr>
-   	            <td align="center"><?php echo $data['category_id']; ?></td>
-                <td align="center"><?php echo $data['name_id']; ?></td>
-                <td style="width: 30px; text-align:center; vertical-align: middle;"><a href="?page=edit_data_category&id=<?php echo $data['category_id']; ?>" tittle="Edit"><img src="images/edit.png"/ width="15px" height="15px"></a></td>
-                <td style="width: 30px; text-align:center; vertical-align: middle;"><a href="?page=proses_hapus_data_category&id=<?php echo $data['category_id']; ?>" onclick="return confirm('Anda yakin ingin menghapus data ini..?')"><img src="images/delete.png"/ width="15px" height="15px"></a></td>
+   	            <td align="center"><?php echo $data['writer_id']; ?></td>
+                <td align="center"><?php echo $data['writer_name']; ?></td>
+                <td style="width: 30px; text-align:center; vertical-align: middle;"><a href="?page=edit_data_writer&id=<?php echo $data['writer_id']; ?>" tittle="Edit"><img src="images/edit.png"/ width="15px" height="15px"></a></td>
+                <td style="width: 30px; text-align:center; vertical-align: middle;"><a href="?page=proses_hapus_data_writer&id=<?php echo $data['writer_id']; ?>" onclick="return confirm('Anda yakin ingin menghapus data ini..?')"><img src="images/delete.png"/ width="15px" height="15px"></a></td>
               </tr>
             <?php $no++; } ?>
             

@@ -9,13 +9,13 @@
 
 <!-- menu tengah -->
 <div id="menu-tengah">
-	<div id="bg_menu">Data Teknisi
+	<div id="bg_menu">Data Category
 	</div>
 	<div id="content_menu">
     <div id="menu_header">
     	<table width="100%" height="100%" style="background-color:#9cc;">
         	<tr>
-            	<td align="center">Input Dat</td>
+            	<td align="center">Input Data</td>
             </tr>
         </table>
 	</div>
@@ -29,7 +29,7 @@
                     <td><input type="text" name="id" size="50%" required="required"></td>
                 </tr>
                 <tr>
-                    <td width="20%" align="right">Namar</td>
+                    <td width="20%" align="right">Nama</td>
                     <td><input type="text" name="name" size="50%" required="required"></td>
                 </tr>
                 <tr>

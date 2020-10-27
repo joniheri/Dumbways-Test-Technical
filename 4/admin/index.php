@@ -47,41 +47,76 @@
         	<a href="?page=data_book" class="menu">&raquo; Book </a> <br />
         </div>
     </div>
-	    
-    	     <?php
-				 error_reporting(0);
-				 switch($_GET['page'])
-				 	{
-						default:
-						include "home.php";
-						break;			
-			
-						//data category
-						case "data_category";
-						include "data_category/data_category.php";
-						break;
-						case "proses_hapus_data_category";
-						include "data_category/proses_hapus_data_category.php";
-						break;
-						case "tambah_data_category";
-						include "data_category/tambah_data_category.php";
-						break;
-						case "proses_simpan_tambah_data_category";
-						include "data_category/proses_simpan_tambah_data_category.php";
-						break;
-						case "edit_data_category";
-						include "data_category/edit_data_category.php";
-						break;
-						case "proses_simpan_edit_data_category";
-						include "data_category/proses_simpan_edit_data_category.php";
-						break;
+	    <?php
+			error_reporting(0);
+			switch($_GET['page'])
+		 	{
+				default:
+				include "home.php";
+				break;			
+	
+				//data category
+				case "data_category";
+				include "data_category/data_category.php";
+				break;
+				case "proses_hapus_data_category";
+				include "data_category/proses_hapus_data_category.php";
+				break;
+				case "tambah_data_category";
+				include "data_category/tambah_data_category.php";
+				break;
+				case "proses_simpan_tambah_data_category";
+				include "data_category/proses_simpan_tambah_data_category.php";
+				break;
+				case "edit_data_category";
+				include "data_category/edit_data_category.php";
+				break;
+				case "proses_simpan_edit_data_category";
+				include "data_category/proses_simpan_edit_data_category.php";
+				break;
 
-						//data writer dan book, caranya sama dengan category
-					}
-			?>
+				//data writer
+				case "data_writer";
+				include "data_writer/data_writer.php";
+				break;
+				case "proses_hapus_data_writer";
+				include "data_writer/proses_hapus_data_writer.php";
+				break;
+				case "tambah_data_writer";
+				include "data_writer/tambah_data_writer.php";
+				break;
+				case "proses_simpan_tambah_data_writer";
+				include "data_writer/proses_simpan_tambah_data_writer.php";
+				break;
+				case "edit_data_writer";
+				include "data_writer/edit_data_writer.php";
+				break;
+				case "proses_simpan_edit_data_writer";
+				include "data_writer/proses_simpan_edit_data_writer.php";
+				break;
 
-    
-</div>
+				//data book
+				case "data_book";
+				include "data_book/data_book.php";
+				break;
+				case "proses_hapus_data_book";
+				include "data_book/proses_hapus_data_book.php";
+				break;
+				case "tambah_data_book";
+				include "data_book/tambah_data_book.php";
+				break;
+				case "proses_simpan_tambah_data_book";
+				include "data_book/proses_simpan_tambah_data_book.php";
+				break;
+				case "edit_data_book";
+				include "data_book/edit_data_book.php";
+				break;
+				case "proses_simpan_edit_data_book";
+				include "data_book/proses_simpan_edit_data_book.php";
+				break;
+			}
+		?>
+    </div>
     <!-- menu Merapikan div content -->
     <div class="clear">
    	</div>
